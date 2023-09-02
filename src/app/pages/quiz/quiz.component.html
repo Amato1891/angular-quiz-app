@@ -1,0 +1,5 @@
+<app-quiz-form (formSubmitted)="handleFormSubmission($event)" *ngIf="!formData"></app-quiz-form>
+<app-quiz-header (quizSubmission)="onQuizSubmission($event)" [quizCategory]="quizCategory" [quizId]="quizId" *ngIf="formData && !isQuizSubmitted"></app-quiz-header>
+<app-quiz-scorecard [correctAnswers]="submittedCorrectAnswers" (resetFormDataChange)="onResetFormDataChange($event)"
+(resetQuizSubmittedStatusChange)="onResetQuizSubmittedStatusChange($event)"
+[totalQuestions]="totalQuestions" *ngIf="isQuizSubmitted ? true : false"></app-quiz-scorecard>

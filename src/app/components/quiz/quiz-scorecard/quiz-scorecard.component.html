@@ -1,0 +1,14 @@
+<div class="score-card">
+    <h2>Quiz Score</h2>
+    <p>Correct Answers: {{ correctAnswers }}</p>
+    <p>Total Questions: {{ totalQuestions }}</p>
+    <small class="percentage">% {{percentageCorrect}}</small>
+    <br/>
+    <div class="progress-bar">
+        <div class="fill" [style.width.%]="percentageCorrect"></div>
+      </div>
+      <div class="button-container">
+        <br/>
+      <button (click)="takeAnotherQuiz()">Take Another Quiz</button>
+    </div>
+  </div>

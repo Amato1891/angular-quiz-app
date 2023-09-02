@@ -1,0 +1,36 @@
+.select-container {
+    position: relative;
+    width: 200px;
+    left: 55%;
+  }
+
+.styled-select {
+    appearance: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .select-container::after {
+    content: '\25BC'; /* Down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+  }
+
+  .styled-select:hover {
+    border-color: #aaa;
+  }
+
+  .styled-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }

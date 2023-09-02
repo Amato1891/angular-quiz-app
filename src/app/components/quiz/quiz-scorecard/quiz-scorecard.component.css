@@ -1,0 +1,65 @@
+.score-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+  }
+
+  .button-container button {
+    background-color: steelblue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+  
+  .score-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .score-card p {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .fill {
+    height: 100%;
+    background-color: transparent;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #4caf50,
+      #4caf50 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    transition: width 0.5s;
+    animation: progressAnimation 3s linear infinite;
+  }
+
+  @keyframes progressAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+  
