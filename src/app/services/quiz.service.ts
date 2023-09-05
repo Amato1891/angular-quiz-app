@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable, BehaviorSubject} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { QuizButtonComponent } from '../components/quiz/quiz-button/quiz-button.component';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,7 +15,7 @@ const httpOptions = {
 
 export class QuizService {
 
-  private apiUrl = 'http://54.146.199.55:8080';
+  private apiUrl = 'http://jim-amato-springboot-demo.us-east-1.elasticbeanstalk.com';
 
   constructor(private http:HttpClient) { }
 

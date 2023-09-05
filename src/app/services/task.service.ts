@@ -6,14 +6,14 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
-    'Accept': 'application/json'
+    'Accept': 'application/json',
   }),
 }
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://54.146.199.55:8080'
+  private apiUrl = 'http://jim-amato-springboot-demo.us-east-1.elasticbeanstalk.com'
 
   constructor(private http:HttpClient) { }
 
