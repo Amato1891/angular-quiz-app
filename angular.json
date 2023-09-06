@@ -6,7 +6,7 @@
     "angular-project": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
+      "root": "angular-quiz-app/",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
