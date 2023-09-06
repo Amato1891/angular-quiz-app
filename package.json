@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "buildNewDir": "ng build --output-path dist --base-href angular-quiz-app",
+    "buildProd": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server --watch db.json --port 5000"
