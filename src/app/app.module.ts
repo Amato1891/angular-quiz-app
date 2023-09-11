@@ -18,6 +18,9 @@ import { QuizHeaderComponent } from './components/quiz/quiz-header/quiz-header.c
 import { QuizButtonComponent } from './components/quiz/quiz-button/quiz-button.component';
 import { QuizFormComponent } from './components/quiz/quiz-form/quiz-form.component';
 import { QuizScorecardComponent } from './components/quiz/quiz-scorecard/quiz-scorecard.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NavComponent} from './components/nav/nav.component';
+import { DatepickerComponent } from './components/task-tracker/datepicker/datepicker.component'
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
@@ -39,7 +42,9 @@ const appRoutes: Routes = [
     QuizHeaderComponent,
     QuizButtonComponent,
     QuizFormComponent,
-    QuizScorecardComponent
+    QuizScorecardComponent,
+    NavComponent,
+    DatepickerComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,8 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

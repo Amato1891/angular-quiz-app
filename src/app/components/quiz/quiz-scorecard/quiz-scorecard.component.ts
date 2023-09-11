@@ -13,6 +13,7 @@ export class QuizScorecardComponent implements OnChanges {
   resetFormData: boolean = false;
   resetQuizSubmittedStatus: boolean = false;
   percentageCorrect: number = 0;
+  colorOfProgressBar: String = '';
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['correctAnswers'] || changes['totalQuestions']) {
@@ -23,6 +24,7 @@ export class QuizScorecardComponent implements OnChanges {
   private calculatePercentage() {
     if (this.totalQuestions !== 0) {
       this.percentageCorrect = Math.round((this.correctAnswers / this.totalQuestions) * 100);
+      this.colorOfProgressBar = this.percentageCorrect > 70 ? 'success' : this.percentageCorrect > 50 ? 'warning' : 'danger';
     } else {
       this.percentageCorrect = 0;
     }

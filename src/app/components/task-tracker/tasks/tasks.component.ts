@@ -28,7 +28,11 @@ export class TasksComponent {
   }
 
   addTask(task:Task) {
-    this.taskService.addTask(task).subscribe((task) => {(this.tasks.push(task))});
+    this.taskService.addTask(task).subscribe((task) => {
+      this.taskService.getTasks().subscribe((tasks) => {
+        this.tasks = tasks
+      });
+    });
   }
 
 }

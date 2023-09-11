@@ -5,7 +5,7 @@
     <small class="percentage">% {{percentageCorrect}}</small>
     <br/>
     <div class="progress-bar">
-        <div class="fill" [style.width.%]="percentageCorrect"></div>
+        <p><ngb-progressbar type={{colorOfProgressBar}} [value]="percentageCorrect" [striped]="true"></ngb-progressbar></p>
       </div>
       <div class="button-container">
         <br/>
