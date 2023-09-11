@@ -74,11 +74,3 @@ body {
   flex: 2;
   height: 20px;
 }
-
-.footer {
-  background-color: steelblue;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}

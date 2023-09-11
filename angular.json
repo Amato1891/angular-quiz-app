@@ -27,8 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "baseHref": "/angular-quiz-app/"
+            "scripts": []
           },
           "configurations": {
             "production": {
