@@ -49,4 +49,15 @@ export class QuizService {
   setSelectedValue(value: string) {
     this.selectedValueSubject.next(value);
   }
+
+  // HIGHSCORES
+
+  getHighscores(): Observable<any> {
+    return this.http.get<[]>(`${this.apiUrl}/quiz/highscores/getHighscores`)
+  }
+  updateNameForLeaderboards(quizId: any, body:any): Observable<string> {
+    const url = `${this.apiUrl}/quiz/highscores/addNameHighscore/${quizId}`;
+    console.log (body)
+    return this.http.put<any>(url, body, httpOptions);
+  }
 }

@@ -9,6 +9,21 @@
       </div>
       <div class="button-container">
         <br/>
-      <button (click)="takeAnotherQuiz()">Take Another Quiz</button>
+        <div *ngIf="percentageCorrect < 50"> <h6>You didnt score high enough to earn a spot on our leaderboards.</h6><br/><br/>
+      <button  (click)="takeAnotherQuiz()">Take Another Quiz</button>
+    </div>
+      <div class="form-control" *ngIf="percentageCorrect > 50">
+        <div><h5>Great Job! </h5><br/><h6>You scored high enough to be featured on our leaderboards!</h6></div>
+        <label for="text">Leaderboard Known As</label>
+        <input
+          type="text"
+          name="text"
+          id="text"
+          [(ngModel)]="name"
+          placeholder="Name"
+          maxlength="5"
+        />
+      <button (click)="updateNameForLeaderboards()">Add me to Leaderboards</button>
+    </div>
     </div>
   </div>

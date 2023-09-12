@@ -1,4 +1,6 @@
 import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { QuizService } from 'src/app/services/quiz.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz-scorecard',
@@ -10,10 +12,14 @@ export class QuizScorecardComponent implements OnChanges {
   @Input() totalQuestions: number = 0;
   @Output() resetFormDataChange = new EventEmitter<boolean>();
   @Output() resetQuizSubmittedStatusChange = new EventEmitter<boolean>();
+  @Input() quizId: string | null = null;
   resetFormData: boolean = false;
   resetQuizSubmittedStatus: boolean = false;
   percentageCorrect: number = 0;
   colorOfProgressBar: String = '';
+  name: string;
+
+  constructor (private quizService: QuizService, private router: Router) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['correctAnswers'] || changes['totalQuestions']) {
@@ -35,5 +41,12 @@ export class QuizScorecardComponent implements OnChanges {
     this.resetQuizSubmittedStatus = true;
     this.resetFormDataChange.emit(this.resetFormData);
     this.resetQuizSubmittedStatusChange.emit(this.resetQuizSubmittedStatus);
+  }
+
+  updateNameForLeaderboards () {
+    if (!this.name) return;
+    if (!this.quizId) return;
+    this.quizService.updateNameForLeaderboards(this.quizId, this.name).subscribe();
+    this.router.navigate(['/highscores']);
   }
 }

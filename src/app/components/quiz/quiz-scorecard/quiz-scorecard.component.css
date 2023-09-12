@@ -63,3 +63,10 @@
     }
   }
   
+  .form-control {
+    background-color: rgb(216, 215, 215);
+  }
+
+  input {
+    border-radius: 4%;
+  }

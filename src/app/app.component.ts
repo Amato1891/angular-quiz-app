@@ -13,13 +13,12 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
-  isOnQuizRoute() {
+  isOnHomeRoute() {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.currentRoute = event.urlAfterRedirects;
-        console.log('Current Route:', this.currentRoute);
       });
-      return this.currentRoute === '/quiz' ? false : true;
+      return this.currentRoute === '/' ? true : false;
     }
 }

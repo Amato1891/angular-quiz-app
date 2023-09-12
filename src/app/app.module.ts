@@ -20,12 +20,15 @@ import { QuizFormComponent } from './components/quiz/quiz-form/quiz-form.compone
 import { QuizScorecardComponent } from './components/quiz/quiz-scorecard/quiz-scorecard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NavComponent} from './components/nav/nav.component';
-import { DatepickerComponent } from './components/task-tracker/datepicker/datepicker.component'
+import { DatepickerComponent } from './components/task-tracker/datepicker/datepicker.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HighscoresComponent } from './pages/highscores/highscores.component'
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'quiz', component: QuizComponent}
+  {path: 'quiz', component: QuizComponent},
+  {path: 'highscores', component: HighscoresComponent}
 ]
 
 @NgModule({
@@ -53,7 +56,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
