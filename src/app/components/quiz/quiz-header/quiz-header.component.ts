@@ -45,7 +45,6 @@ export class QuizHeaderComponent {
     // if num of answers === num of questions then submit and grade the quiz
     if (this.quizAnswersToCheck.length === this.questionsArray.length) {
       // call service to grade quiz
-      console.log(this.quizAnswersToCheck)
       this.callSubmitQuizMethod(this.quizId, this.quizAnswersToCheck);
       this.isQuizSubmitted = true;
     }
