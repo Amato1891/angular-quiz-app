@@ -1,8 +1,7 @@
-# Jim's Angular-SpringBoot Project
+# Angular-SpringBoot Project
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Amato1891/angular-quiz-app)](https://github.com/your-username/your-repo/issues)
-[![GitHub stars](https://img.shields.io/github/stars/Amato1891/angular-quiz-app)](https://github.com/your-username/your-repo/stargazers)
 
 ## Description
 
