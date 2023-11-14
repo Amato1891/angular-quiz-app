@@ -1,8 +1,8 @@
-<h1>LeaderBoards</h1>
+<h1>Leader Board</h1>
 <hr/>
-<div class="mat-elevation-z8">
+<ng-container *ngIf="dataLoaded; else noHighscores">
+  <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
-  
       <ng-container matColumnDef="rank">
         <th mat-header-cell *matHeaderCellDef> Rank </th>
         <td mat-cell *matCellDef="let element"> {{element.rank}} </td>
@@ -32,4 +32,28 @@
                    aria-label="Select page of periodic elements">
     </mat-paginator>
   </div>
+</ng-container>
+
   
+<ng-template #noHighscores>
+  <div class="skeleton-loader-container-item">
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+  <div class="skeleton-loader"></div>
+</div>
+</ng-template>

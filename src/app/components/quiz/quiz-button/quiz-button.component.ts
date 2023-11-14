@@ -23,9 +23,4 @@ export class QuizButtonComponent {
     this.selectedValueChanged.emit(selectedValue);
     this.quizService.setSelectedValue(selectedValue);
   }
-
-  onSubmitForm() {
-    // Handle form submission logic here
-    console.log('Form submitted!', this.selectedCategory, this.numberOfQuestions, this.quizTitle);
-  }
 }

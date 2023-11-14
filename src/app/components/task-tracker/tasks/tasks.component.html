@@ -1,3 +1,28 @@
 <app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<ng-container *ngIf="tasks.length > 0; else noTasks">
 <app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)" (onToggleReminder)="toggleReminder(task)">
 </app-task-item>
+</ng-container>
+
+<ng-template #noTasks>
+    <div class="skeleton-loader-container-item">
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+</div>
+<div class="skeleton-loader-container-item">
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+</div>
+<div class="skeleton-loader-container-item">
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+</div>
+<div class="skeleton-loader-container-item">
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader"></div>
+</div>
+  </ng-template>

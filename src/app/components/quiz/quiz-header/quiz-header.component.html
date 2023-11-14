@@ -1,7 +1,7 @@
 <div>
   <small>Question {{questionCounter}} of {{questionsArray ? questionsArray.length : 0}}</small>
     <h2>{{ quizCategory }} Quiz</h2>
-    <h3 class="question-title">{{ getQuestionTitle() }}</h3>
+    <h3 class="question-title" [class.loading-placeholder]="!isDataLoaded">{{ getQuestionTitle() }}</h3>
     <div class="quiz-container">
       <div
   class="item custom-cursor"
@@ -9,6 +9,8 @@
   [class.loading-placeholder]="!isDataLoaded"
   [class.pressed]="lastClicked === 0"
 >
+<div [class.loading-placeholder]="!isDataLoaded"></div>
+<div [class.loading-placeholder]="!isDataLoaded"></div>
   {{ getOptionValue(0) }}
 </div>
 <div
@@ -17,6 +19,8 @@
   [class.loading-placeholder]="!isDataLoaded"
   [class.pressed]="lastClicked === 1"
 >
+<div [class.loading-placeholder]="!isDataLoaded"></div>
+<div [class.loading-placeholder]="!isDataLoaded"></div>
   {{ getOptionValue(1) }}
 </div>
 <div
@@ -25,6 +29,8 @@
   [class.loading-placeholder]="!isDataLoaded"
   [class.pressed]="lastClicked === 2"
 >
+<div [class.loading-placeholder]="!isDataLoaded"></div>
+<div [class.loading-placeholder]="!isDataLoaded"></div>
   {{ getOptionValue(2) }}
 </div>
 <div
@@ -33,6 +39,8 @@
   [class.loading-placeholder]="!isDataLoaded"
   [class.pressed]="lastClicked === 3"
 >
+<div [class.loading-placeholder]="!isDataLoaded"></div>
+<div [class.loading-placeholder]="!isDataLoaded"></div>
   {{ getOptionValue(3) }}
 </div>
       <button class="btn span-bottom" [style.backgroundColor]="questionCounter === questionsArray.length ? 'red' : 'steelblue'"

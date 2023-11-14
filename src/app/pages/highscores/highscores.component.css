@@ -1,8 +1,34 @@
 table {
     width: 100%;
-    background-color: rgb(245, 245, 245);
   }
 
 h1 {
   text-align: center;
+}
+
+.skeleton-loader {
+  background: linear-gradient(90deg, #cecece 25%, #c5c5c5 50%, #cacaca 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  width: 97%;
+  height: 20px;
+  margin: 8px;
+}
+
+.skeleton-loader-container-item {
+  background: linear-gradient(90deg, #a5a5a5 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border: solid grey 3px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }

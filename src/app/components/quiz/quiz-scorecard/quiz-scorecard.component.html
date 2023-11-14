@@ -9,11 +9,11 @@
       </div>
       <div class="button-container">
         <br/>
-        <div *ngIf="percentageCorrect < 50"> <h6>You didnt score high enough to earn a spot on our leaderboards.</h6><br/><br/>
+        <div *ngIf="percentageCorrect <= 50"> <h3>You didnt score high enough to earn a spot on our leaderboards.</h3><br/><br/>
       <button  (click)="takeAnotherQuiz()">Take Another Quiz</button>
     </div>
       <div class="form-control" *ngIf="percentageCorrect > 50">
-        <div><h5>Great Job! </h5><br/><h6>You scored high enough to be featured on our leaderboards!</h6></div>
+        <div><h2>Great Job! </h2><br/><h3>You scored high enough to be featured on our leaderboards!</h3></div>
         <label for="text">Leaderboard Known As</label>
         <input
           type="text"

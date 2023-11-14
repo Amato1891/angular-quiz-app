@@ -28,8 +28,7 @@ export class QuizHeaderComponent {
   }
 
   chosenAnswer(event: any, index: number) {
-    console.log('answer selected: ',event.target.innerHTML);
-    this.answerToSubmit = event.target.innerHTML;
+    this.answerToSubmit = event.target.innerText;
     this.lastClicked = index;
   };
 
@@ -42,9 +41,11 @@ export class QuizHeaderComponent {
     this.answerToSubmit = null;
     this.questionCounter++;
     this.lastClicked = null;
+    
     // if num of answers === num of questions then submit and grade the quiz
     if (this.quizAnswersToCheck.length === this.questionsArray.length) {
       // call service to grade quiz
+      console.log(this.quizAnswersToCheck)
       this.callSubmitQuizMethod(this.quizId, this.quizAnswersToCheck);
       this.isQuizSubmitted = true;
     }
@@ -54,7 +55,6 @@ export class QuizHeaderComponent {
   callGetQuizMethod(quizId) {
     this.quizService.getQuizById(quizId)
       .subscribe(res => {
-        console.log(res)
         this.questionsArray = res;
       });
 }
@@ -79,12 +79,9 @@ callSubmitQuizMethod(quizId, body) {
   getQuestionTitle(): string {
 
     if (!this.questionsArray || this.questionsArray.length === 0) {
-      return 'Searching For Questions...';
+      return '';
     }
 
-    console.log(this.questionsArray)
-    console.log(this.questionsArray[this.questionCounter - 1])
-    console.log(this.questionsArray[this.questionCounter - 1].questionTitle)
     if (this.questionsArray[this.questionCounter - 1].questionTitle) {
       this.onDataLoaded();
 
@@ -96,7 +93,7 @@ callSubmitQuizMethod(quizId, body) {
 
   getOptionValue(index: number): string {
     if (!this.questionsArray || this.questionsArray.length === 0) {
-      return 'Loading...';
+      return '';
     }
   
     if (this.questionsArray[this.questionCounter - 1]?.hasOwnProperty(`option${index + 1}`)) {
@@ -104,7 +101,7 @@ callSubmitQuizMethod(quizId, body) {
       const optionKey = `option${index + 1}`;
       return this.questionsArray[this.questionCounter - 1][optionKey];
     } else {
-      return 'There is no value';
+      return '';
     }
   }
 }

@@ -16,12 +16,10 @@ export class QuizComponent {
   constructor(private quizService: QuizService) {}
 
   onResetFormDataChange(resetFormData: boolean) {
-    console.log('resetting form data to false')
     this.formData = false;
   }
   
   onResetQuizSubmittedStatusChange(resetQuizSubmittedStatus: boolean) {
-    console.log('resetting form data to false')
     this.isQuizSubmitted = false;
   }
 

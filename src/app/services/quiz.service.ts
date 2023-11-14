@@ -38,7 +38,6 @@ export class QuizService {
   }
 
   submitQuizAnswers(quizId: any, body: any): Observable<any> {
-    console.log (body)
     return this.http.post<any>(`${this.apiUrl}/quiz/submit/${quizId}`, body, httpOptions);
   }
 
@@ -57,7 +56,6 @@ export class QuizService {
   }
   updateNameForLeaderboards(quizId: any, body:any): Observable<string> {
     const url = `${this.apiUrl}/quiz/highscores/addNameHighscore/${quizId}`;
-    console.log (body)
     return this.http.put<any>(url, body, httpOptions);
   }
 }

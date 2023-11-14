@@ -4,6 +4,8 @@ import { BrowserModule, enableDebugTools } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/task-tracker/header/header.component';
 import { ButtonComponent } from './components/task-tracker/button/button.component';
@@ -23,6 +25,7 @@ import {NavComponent} from './components/nav/nav.component';
 import { DatepickerComponent } from './components/task-tracker/datepicker/datepicker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighscoresComponent } from './pages/highscores/highscores.component'
+import { MatButtonModule } from '@angular/material/button';
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
@@ -57,7 +60,10 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

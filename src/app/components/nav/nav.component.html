@@ -1,11 +1,17 @@
-<ul ngbNav #nav="ngbNav" class="nav-tabs">
-    <li ngbNavItem>
-      <button ngbNavLink routerLink="/">Task-App</button>
-    </li>
-    <li ngbNavItem>
-      <button ngbNavLink routerLink="/quiz">Quiz-App</button>
-    </li>
-    <li ngbNavItem>
-        <button ngbNavLink routerLink="/highscores">Quiz-Leaderboards</button>
-      </li>
-  </ul>
+<p>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Angular/Spring Boot Demo</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Toggle menu" (click)="isMenuOpen = !isMenuOpen">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row *ngIf="isMenuOpen">
+      <span class="menu-item-style" routerLink="/" (click)="isMenuOpen = !isMenuOpen">Home</span>&nbsp;&nbsp;&nbsp;
+    <span class="menu-item-style" routerLink="/quiz" (click)="isMenuOpen = !isMenuOpen">Quiz</span>&nbsp;&nbsp;&nbsp;
+    <span class="menu-item-style" routerLink="/highscores" (click)="isMenuOpen = !isMenuOpen">LeaderBoard</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</p>
