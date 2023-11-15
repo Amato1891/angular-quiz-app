@@ -1,27 +1,19 @@
-# AngularProject
+# Angular-SpringBoot Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0. 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Amato1891/angular-quiz-app)](https://github.com/your-username/your-repo/issues)
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+My Angular-SpringBoot Project is a comprehensive web application that seamlessly integrates Angular on the front end and Java SpringBoot on the backend. The application is hosted on AWS, providing a scalable and reliable environment.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Quiz App
+The Quiz App feature allows users to participate in interactive quizzes. Users can answer questions and view their scores. The quiz system is designed for flexibility, making it easy to add new quizzes and questions.
 
-## Build
+### Task Tracker
+The Task Tracker feature enables users to manage their tasks efficiently. Users can create, edit, and delete tasks, set deadlines, and mark tasks as completed. The Task Tracker aims to enhance productivity and organization within the application.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Quiz Leaderboard
+The Quiz Leaderboard provides a competitive element to the Quiz App. Users can view the scores of other participants, compare their performance, and strive to be at the top of the leaderboard. This feature adds a social and competitive aspect to the quiz experience.
