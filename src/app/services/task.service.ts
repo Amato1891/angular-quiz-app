@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class TaskService {
   // AWS server
-  private apiUrl = 'http://jim-amato-springboot-demo.us-east-1.elasticbeanstalk.com';
+  private apiUrl = 'http://Springboot-app-env.eba-ebqhpwvt.us-east-1.elasticbeanstalk.com';
 
   // local server
   // private apiUrl = 'http://localhost:8081';
