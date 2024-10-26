@@ -14,10 +14,10 @@ const httpOptions = {
 })
 export class TaskService {
   // AWS server
-  private apiUrl = 'http://Springboot-app-env.eba-ebqhpwvt.us-east-1.elasticbeanstalk.com';
+  private apiUrl = 'http://3.92.158.55:5000';
 
   // local server
-  // private apiUrl = 'http://localhost:8081';
+  // private apiUrl = 'http://localhost:5000';
 
   constructor(private http:HttpClient) { }
 

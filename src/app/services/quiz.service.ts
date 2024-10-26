@@ -16,7 +16,7 @@ const httpOptions = {
 export class QuizService {
 
   // AWS server
-  private apiUrl = 'http://Springboot-app-env.eba-ebqhpwvt.us-east-1.elasticbeanstalk.com';
+  private apiUrl = 'http://3.92.158.55:5000';
 
   // local server
   // private apiUrl = 'http://localhost:8081';
