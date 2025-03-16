@@ -1,18 +1,13 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Amato1891/angular-quiz-app/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/Amato1891/angular-quiz-app)](https://github.com/Amato1891/angular-quiz-app/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/Amato1891/angular-quiz-app)](https://github.com/Amato1891/angular-quiz-app/commits/main)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fyour-website-url.com)](http://jims-angular-frontend.s3-website-us-east-1.amazonaws.com/)
 [![Language](https://img.shields.io/github/languages/top/Amato1891/angular-quiz-app)](https://github.com/Amato1891/angular-quiz-app)
-[![Build Status](https://img.shields.io/github/workflow/status/Amato1891/angular-quiz-app/CI)](https://github.com/Amato1891/angular-quiz-app/actions)
 # Angular Quiz App
 
 ## 📑 Table of Contents
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Live Website](#-live-website)
-- [Setup](#-setup)
-- [Deployment](#-deployment)
-- [Contact](#-contact)
 - [Issues](#-issues)
 
 Welcome to the official repository for the **Angular Quiz App**! This project is an interactive quiz app built using Angular that allows users to take quizzes on various topics, track their scores, and improve their knowledge. 
@@ -48,13 +43,10 @@ The **Quiz Leaderboard** brings a competitive edge to the Quiz App. It displays 
   - AWS RDS (for database hosting)
   
 ## 🌐 Live Website
-You can check out the live version of the website at:  
+You can check out the live version of the static frontend at:  
 [Angular Quiz App](http://jims-angular-frontend.s3-website-us-east-1.amazonaws.com/)
 
-## 🛠️ Setup
-To run this project locally, follow these steps:
+## 🐞 Issues
+If you encounter any bugs or issues with the app, please feel free to open an issue here on GitHub. We'll address them as soon as possible!
 
-### Clone the repository:
-
-```bash
-git clone https://github.com/Amato1891/angular-quiz-app.git
+**Note:** Currently, only the static frontend is available. The backend API, hosted on AWS EC2, is temporarily down for cost-saving purposes. As a result, some features such as quiz submissions, leaderboard updates, and task tracking are not functional at the moment. We plan to bring the backend back online in the future, so stay tuned for updates!
